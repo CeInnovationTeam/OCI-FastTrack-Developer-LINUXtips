@@ -449,7 +449,7 @@ NAME           STATUS   ROLES   AGE   VERSION
 
 ![](./Images/058-LAB4.png)
 
-Parabéns!! Você construiu com sucesso seu primeiro pipeline completo de DevOps dentro de Oracle Cloud!! O passo a seguir é direcionado para validação do projeto.
+Parabéns por chegar até aqui!! Nosso pipeline já está pronto! No próximo passo iremos validar o projeto, checando se está tudo ok.
 
  ## <a name="Passo6"></a> Passo 6: Execução e testes
   1.  Retorne ao projeto clicando no 🍔 menu hambúrguer e acessando: **Developer Services**  → **Projects**.
@@ -502,4 +502,4 @@ svc-java-app   LoadBalancer   10.96.16.229    <EXTERNAL-IP>   8081:32344/TCP   1
 
 ![](./Images/059-LAB4.png)
 
-👏🏻 Parabéns!!! Você concluiu este lab sobre OCI DevOps! 🚀
+### 👏🏻 Parabéns!!! Você foi capaz de construir com sucesso um pipeline completo de **DevOps** na OCI! 🚀
