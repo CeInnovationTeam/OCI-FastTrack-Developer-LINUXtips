@@ -16,15 +16,15 @@ spec:
     spec:
       containers:
       - name: backend
-        image: [Sua Região/Namespace]/linuxtips/back:latest
+        image: <region-key>/<tenancy-namespace>/linuxtips/back:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
         env:
         - name: APM_URL
-          value: "[Substitua pelo Endpoint do APM]"
+          value: "<Substitua pelo Endpoint do APM>"
         - name: APM_KEY
-          value: "[Substitua pela Public Key do APM]"
+          value: "<Substitua pela Public Key do APM>"
       imagePullSecrets:
       - name: ocisecret
 ---

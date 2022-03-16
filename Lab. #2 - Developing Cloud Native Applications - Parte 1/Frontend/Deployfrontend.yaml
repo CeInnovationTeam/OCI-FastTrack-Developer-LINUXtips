@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: [Sua Região/Namespace]/linuxtips/front:latest
+        image: <region-key>/<tenancy-namespace>/linuxtips/front:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
