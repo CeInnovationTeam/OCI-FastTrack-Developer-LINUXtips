@@ -1,5 +1,7 @@
 # OCI-FastTrack-Developer-LINUXtips
-Este é um evento preparatório para a certificação OCI Developer Associate! 🚀
+Este é um evento preparatório para a certificação [OCI Developer Associate](https://mylearn.oracle.com/learning-path/become-an-oci-developer-associate/35644/102197)! 🚀
+
+Sequência de labs:
 
 - Lab. #1 - Resource Provisioning
 - Lab. #2 - Developing Cloud Native Applications - Parte 1
