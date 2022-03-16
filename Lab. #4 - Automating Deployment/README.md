@@ -1,6 +1,6 @@
 # Lab. #4 - Automating Deployment
 
-Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **OCI DevOps**, capaz de entregar uma aplicação containerizada, de forma automatizada, a um cluster Kubernetes!
+Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **OCI DevOps**, que irá automatizar a entrega de uma aplicação conteinerizada a um cluster Kubernetes!
 
 - 🌀 [Página oficial do OCI DevOps](https://www.oracle.com/br/devops/devops-service/)
 - 🧾 [Documentação do OCI DevOps](https://docs.oracle.com/pt-br/iaas/Content/devops/using/home.htm)
@@ -283,7 +283,7 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
        
 ![](./Images/034_0-LAB4.png)
 
-Isso conclui a parte de Build (CI) do projeto! Até aqui automatizamos a compilação do código java, criamos a imagem de contêiner, e armazenamos ambas nos repositórios de artefatos, e de imagens de contêiner respectivamente. Vamos agora para a parte de Deploy (CD)!
+Isso conclui a parte de Build (CI) do projeto! Até aqui automatizamos a compilação do código java, criamos a imagem de contêiner, e armazenamos ambas nos repositórios de artefatos, e de imagens de contêiner respectivamente. Vamos agora para a parte de Deployment (CD)!
 
 ## <a name="Passo4"></a> Passo 4: Criar e configurar entrega de aplicação a cluster Kubernetes (CD)
 
@@ -333,132 +333,137 @@ NAME           STATUS   ROLES   AGE   VERSION
   chmod +x create-secret.sh 
   ./create-secret.sh  
  ```
-
  8. No campo de password, informe o **Auth Token**.
  9. Aguarde o final do fluxo.
         
 ![](./Images/039-LAB4.png)
 
- 10. Retorne ao projeto: Menu > Serviços de Desenvolvedor > DevOps > Projetos,  e selecione o projeto deste workshop
- 11. No canto esquerdo, selecione **Environments**
+ 10. Retorne ao seu projeto DevOps clicando no 🍔 menu hamburguer e acessando: **Developer Services**  → **Projects**.
+ 11. No canto esquerdo, selecione **Environments**.
          
 ![](./Images/040-LAB4.png)
 
- 12. Clique em **Create New Environment**
-          
-![](./Images/041-LAB4.png)
+ 12. Clique em **Create New Environment**.
 
- 13. Preencha o formulário da seguinte forma:
-  - Environment type: Oracle Kubernetes Engine
-  - Name: OKE
-  - Description: OKE
- 14. Clique em **Next**
- 15. Selecione o Cluster de Kubernetes, e clique em **Create Envrinoment**
- 16. No canto esquerdo selecione **Artifacts** em seguida em **Add Artifact**
+ 13. Preencha o formulário como abaixo e clique em **Next**.
+  - **Environment type**: Oracle Kubernetes Engine
+  - **Name**: OKE
+  - **Description**: OKE
+
+ 14. Selecione o Cluster de Kubernetes, e clique em **Create Envrinoment**.
+
+ ![](./Images/041-LAB4.png)
+
+ 16. No canto esquerdo selecione **Artifacts** em seguida em **Add Artifact**.
           
 ![](./Images/042-LAB4.png)
 
- 17. Preencha o formulario da seguinte forma:
- - Nome: deployment.yaml
- - Tipo: Kubernetes manifest
- - Artifact Source: Inline
- - Value: Cole o conteudo do arquivo https://github.com/CeInnovationTeam/BackendFTDev/blob/main/scripts/deployment.yaml
- *Não altere a identação (espaços) do documento, pois isso pode quebra-lo*
- - Replace parameters used in this artifact: Yes, substitute placeholders
- - Clique em **Add**
+ 17. Preencha o formulario como abaixo e clique em **Add**.
+ - **Name**: deployment.yaml
+ - **Type**: Kubernetes manifest
+ - **Artifact Source**: Inline
+ - **Value**: Cole o conteudo do arquivo https://github.com/CeInnovationTeam/BackendFTDev/blob/main/scripts/deployment.yaml
+ *Não altere a identação (espaços) do documento, pois isso pode quebrá-lo*.
+ - **Replace parameters used in this artifact**: Yes, substitute placeholders
           
-![](./Images/043-LAB4.png)
+![](./Images/043_0-LAB4.png)
 
- 18. No canto esquerdo, selecione **Developer Pipelines** em seguida clique em **Create Pipeline**
+ 18. No canto esquerdo, selecione **Deployment Pipelines** e, em seguida, clique em **Create Pipeline**.
           
 ![](./Images/044-LAB4.png)
 
- 19. Preencha o formulario da seguinte forma:
- - Pipeline name: deploy
- - Descrição: (Defina uma descrição qualquer)
- - Clique em **Create**
+ 19. Preencha o formulário como abaixo e clique em **Create pipeline**.
+ - **Pipeline name**: deploy
+ - **Description**: (Defina uma descrição qualquer).
           
 ![](./Images/048-LAB4.png)
 
- 20. Na Aba de **Parameters** configure o seguinte parametro:
- - REGISTRY_REGION:  <código-de-região>.ocir.io  
- *para o código de referencia de sua região **composto por 3 letras**, utilize a [tabela de referencia](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)*
+ 20. Na Aba de **Parameters** configure o seguinte parâmetro:
+ 
+ - REGISTRY_REGION: `<código-de-região>`.ocir.io  
           
 ![](./Images/049-LAB4.png)
 
- 21. Retorne a aba de **Pipeline** e clique em **Add Stage**
+ 21. Retorne à aba de **Pipeline** e clique em **Add Stage**.
           
 ![](./Images/050-LAB4.png)
 
- 22. Selecione a Opção **Apply Manifest to your Kubernetes Cluster** e clique em **Next**
+ 22. Selecione a Opção **Apply Manifest to your Kubernetes Cluster** e clique em **Next**.
           
 ![](./Images/051-LAB4.png)
 
  23. Preencha o formulário da seguinte forma:
- - Nome: **Deployment da Aplicacao**
- - Descrição: (Defina uma Descrição qualquer)
- - Environment: OKE
- - Clique em **Select Artifact** e selecione **deployment.yaml**
- - Clique em **Add**
-          
-![](./Images/052-LAB4.png)
+ - **Name**: Deployment da Aplicacao
+ - **Description**: (Defina uma Descrição qualquer).
+ - **Environment**: OKE
 
+![](./Images/052_0-LAB4.png)
+
+24. Clique em **Select Artifact**, e selecione **deployment.yaml**.
+
+![](./Images/052_1-LAB4.png)
+
+25. Feito isto, clique em **Add**.
  
- Com isso finalizamos a parte de deployment, no passo a seguir vamos conectar ambos os pipelines, e definir um gatilho para que o processo automatizado se inicie
+ Com isso finalizamos a parte de Deployment (CD) do nosso projeto! No passo a seguir vamos conectar ambos os pipelines, e definir um gatilho (trigger) para que o processo automatizado se inicie!
 
  ## <a name="Passo5"></a> Passo 5: Configurar gatilho do fluxo e conectar pipelines de CI/CD
 
-  1. Retorne ao projeto: Menu > Serviços de Desenvolvedor > DevOps > Projetos,  e selecione o projeto deste workshop
-  2. No canto esquerdo selecione **Triggers** e em seguida **Create Trigger**
+  1. Retorne ao projeto clicando no 🍔 menu hambúrguer e acessando: **Developer Services**  → **Projects**.
+  2. No canto esquerdo selecione **Triggers**, e em seguida clique em **Create Trigger**.
+
   ![](./Images/053-LAB4.png)
-  3. Preencha da seguinte forma:
-  - Nome: Inicio
-  - Descrição: (Defina uma descrição qualquer)
-  - Source connection: OCI Code Repository
-  - Select code repository: ftRepo
-  - Actions: Add Action
-    - Pipeline: build
-    - Event: Push
-    - Source branch: main
-    - Clique em **Save**
-  - Clique em **Create**
-  ![](./Images/054-LAB4.png)
 
-  A partir desse momento, qualquer novo push feito no repositorio do projeto iniciará o pipeline de build criado nesse workshop
+  3. Preencha o formulário como abaixo e clique em **Create**.
+  - **Name**: Inicio
+  - **Description**: (Defina uma descrição qualquer).
+  - **Source connection**: OCI Code Repository
+  - **Select code repository**: ftRepo
+  - **Actions**: Add Action
+    - **Select Build Pipeline**: build
+    - **Event**: Push (check) 
+    - **Source branch**: main
 
-  4. Retorne a configuração do pipeline de build do projeto selecionando **Build Pipelines**, **build**
+![](./Images/054-LAB4.png)
 
-  ![](./Images/055-LAB4.png)
+*A partir desse momento, qualquer novo push feito no repositório do projeto iniciará o pipeline de build criado nesse workshop*.
 
-  5. Na aba de Build Pipeline, clique no sinal de **"+"** abaixo do stage **Entrega de Imagem de Container** e em **Add Stage**
+4. Retorne à configuração do pipeline de build do projeto selecionando **Build Pipelines** → **build**.
 
-  ![](./Images/056-LAB4.png)
+![](./Images/055-LAB4.png)
 
-  6. Selecione o item de **Trigger Deployment**, e clique em **Next**
+  5. Na aba de Build Pipeline, clique no sinal de **"+"** abaixo do stage **Entrega de Imagem de Container** e clique em **Add Stage**.
 
-  ![](./Images/057-LAB4.png)
+![](./Images/056-LAB4.png)
 
-  7. Preencha o formulário da seguinte forma:
-  - Nome: Inicio de Deployment
-  - Descrição: (Defina uma descrição qualquer)
-  - Selecione o pipeline de deployment: deploy
-  - Mantenha os demais campos sem alteração, e clique em **Add**
+6. Selecione o item de **Trigger Deployment**, e clique em **Next**.
 
-  ![](./Images/058-LAB4.png)
+![](./Images/057-LAB4.png)
 
-  Parabéns!! Voce construiu com sucesso seu primeiro pipeline de DevOps dentro de Oracle Cloud!! O passo a seguir é direcionado para validação do projeto
+7. Preencha o formulário como abaixo e clique em **Add**.
+- **Nome**: Inicio de Deployment
+- **Description**: (Defina uma descrição qualquer).
+- **Select deployment pipeline**: deploy
+
+*Mantenha os demais campos sem alteração*.
+
+![](./Images/058-LAB4.png)
+
+Parabéns!! Você construiu com sucesso seu primeiro pipeline completo de DevOps dentro de Oracle Cloud!! O passo a seguir é direcionado para validação do projeto.
 
  ## <a name="Passo6"></a> Passo 6: Execução e testes
- Neste passo validaremos a execução do projeto
-  1.  Retorne ao projeto: Menu > Serviços de Desenvolvedor > DevOps > Projetos,  e selecione o projeto deste workshop
-  2.  Retorne a configuração do pipeline de build do projeto selecionando **Build Pipelines**, **build**
+  1.  Retorne ao projeto clicando no 🍔 menu hambúrguer e acessando: **Developer Services**  → **Projects**.
+  2.  Retorne à configuração do pipeline de build do projeto selecionando **Build Pipelines** → **build**.
   
   ![](./Images/055-LAB4.png)
 
-  3. No canto esquerdo superior, selecione **Start Manual Run**
-  4. Mantenha as informações do formulário padrão, e clique em **Start Manual Run**
-  5. Aguarde a execução do fluxo
-  6. Acesse novamente o CloudShell e execute o comando
+  3. No canto direito superior, selecione **Start Manual Run**.
+
+![](./Images/055_1-LAB4.png)
+
+  4. Mantenha as informações do formulário padrão, e clique em **Start Manual Run**.
+  5. Aguarde a execução do fluxo.
+  6. Acesse novamente o Cloud Shell e execute o comando abaixo.
 
   ```shell
   kubectl get svc
@@ -473,7 +478,8 @@ svc-app        LoadBalancer   10.96.252.115   <svc-app-ip>   80:31159/TCP     29
 svc-java-app   LoadBalancer   10.96.16.229    <EXTERNAL-IP>   8081:32344/TCP   103m
 ```
 
-  8. Execute o comando abaixo substituindo a informação de <EXTERNAL-IP> pelo IP copiado
+  8. No **Cloud Shell**, execute o comando abaixo substituindo a informação de `<EXTERNAL-IP>` pelo IP copiado.
+
    ```shell
   curl --location --request POST '<EXTERNAL-IP>:8081/processcart' \
 --header 'Content-Type: application/json' \
@@ -492,8 +498,8 @@ svc-java-app   LoadBalancer   10.96.16.229    <EXTERNAL-IP>   8081:32344/TCP   1
       }
 ]'
 ```
-- Você deverá visualizar a seguinte resposta:
+- Você deverá visualizar como resposta a soma dos preços dos produtos! Experimente modificar os valores para checar a soma!
 
 ![](./Images/059-LAB4.png)
 
-Parabéns pela conclusão deste laboratório sobre OCI DevOps!
+👏🏻 Parabéns!!! Você concluiu este lab sobre OCI DevOps! 🚀
