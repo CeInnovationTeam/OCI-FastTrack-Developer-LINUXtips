@@ -195,81 +195,87 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 
 ![](./Images/025_1-LAB4.png)
 
-Neste momento é importante entender a forma como a ferramenta trabalha: 
+🤔 Neste momento é importante entender a forma como a ferramenta trabalha 📝.
     
 - A ferramenta utiliza um documento no formato YAML para definir os passos que devem ser executados durante o processo de construção da aplicação.
-- Por padrão este documento é chamado de build_spec.yaml e deve ser configurado previamente de acordo com as necessidades da aplicação
-- Os passos serão então executados por uma instância temporária, que será provisionada no inicio de cada execução e destruida ao final do processo.
-- Documentação de como formatar o documento de build: https://docs.oracle.com/pt-br/iaas/Content/devops/using/build_specs.htm
-- Documento utilizado neste workshop: https://raw.githubusercontent.com/CeInnovationTeam/BackendFTDev/main/build_spec.yaml
+- Por padrão este documento é chamado de *build_spec.yaml* e deve ser configurado previamente de acordo com as necessidades da aplicação.
+- Os passos serão então executados por uma instância temporária (agent), que será provisionada no início de cada execução e destruída ao final do processo.
+- 🧾 [Documentação de como formatar o documento de build](https://docs.oracle.com/pt-br/iaas/Content/devops/using/build_specs.htm)
+- 📑 [Documento utilizado neste workshop (build_spec.yaml)](https://raw.githubusercontent.com/CeInnovationTeam/BackendFTDev/main/build_spec.yaml)
 
  ## <a name="Passo3"></a> Passo 3: Criar e configurar entrega de artefatos (CI)
 
- 1. Na aba de Build Pipeline, clique no sinal de **"+"** abaixo do stage **Criacao de artefatos** e em **Add Stage**
+ 1. Na aba de Build Pipeline, clique no sinal de **"+"**, abaixo do stage **Criacao de artefatos**, e em **Add Stage**.
      
-    ![](./Images/027-LAB4.png)
+![](./Images/027-LAB4.png)
 
 
- 2. Clique em **Deliver Artifacts** e em **Próximo**
+ 2. Selecione a opção **Deliver Artifacts** e clique em **Next**.
      
-    ![](./Images/028-LAB4.png)
+![](./Images/028-LAB4.png)
 
 
- 3. Preencha o formulário da seguinte forma:
- - Stage name: Entrega de artefato
- - Descrição: (Defina uma descrição qualquer)
- - Selecione **Criar Artefato**
-   - Nome: backend_jar
-   - Tipo: General Artifact
-   - Artifact registry: Selecione o Registro de Artefato gerado pelo terraform de nome "artifact_repository"
-   - Artifact location: Set a Custom artifact location and version
-   - Artifact path: backend.jar
-   - Version: ${BUILDRUN_HASH}
-   - Replace parameters used in this artifact: Yes, substitute placeholders
-   - Clique em adicionar
+ 3. Preencha o formulário como abaixo e clique em **Select artifact(s)**.
+ - **Stage name**: Entrega de artefato
+ - **Description**: (Defina uma descrição qualquer).
+
+![](./Images/029_0-LAB4.png)
+
+ 4. Na opção de seleção de artefatos, preencha como abaixo e clique em **Add**.
+   - **Name**: backend_jar
+   - **Type**: General artifact
+   - **Artifact registry**: *Selecione o Artifact registry gerado pelo terraform de nome "artifact_repository"*.
+   - **Artifact location**: Set a Custom artifact location and version
+   - **Artifact path**: backend.jar
+   - **Version**: ${BUILDRUN_HASH}
+   - **Replace parameters used in this artifact**: Yes, substitute placeholders
        
-    ![](./Images/030-LAB4.png)
+![](./Images/030-LAB4.png)
 
 
-- Preencha o campo restante da tabela **Build config/result artifact name** com: app
+5. Preencha o campo restante da tabela **Build config/result artifact name** com "app" e clique em **Add**.
     
-    ![](./Images/029-LAB4.png)
+![](./Images/029_1-LAB4.png)
 
+ 6. Na aba de Build Pipeline, clique no sinal de **"+"** abaixo do stage **Entrega de artefato** e em **Add Stage**.
 
- 4. Clique em **Adicionar**
- 5. Na aba de Build Pipeline, clique no sinal de **"+"** abaixo do stage **Entrega de artefato** e em **Add Stage**
- 6. Clique em **Deliver Artifacts** e em **Próximo**
-     
-    ![](./Images/031-LAB4.png)
+ ![](./Images/031-LAB4.png)
 
- 7. Preencha o formulário da seguinte forma:
- - Stage name: Entrega de Image de Container
- - Descrição: (Defina uma descrição qualquer)
- - Selecione **Criar Artefato**
-   - Nome: backend_Images
-   - Tipo: Container image repository
-   - Artifact Source: `<código-de-região>.ocir.io/${Images_PATH}`
+ 7. Novamente, clique em **Deliver Artifacts** e em **Next**.
+
+ ![](./Images/028-LAB4.png)
+
+ 8. Preencha o formulário da seguinte forma e clique em **Create Artifact**:
+ - **Stage name**: Entrega de Image de Container
+ - **Description**: (Defina uma descrição qualquer).
+
+ ![](./Images/033_0-LAB4.png)
+ 
+ 9. Preencha o formulário como abaixo.
+   - **Name**: backend_img
+   - **Type**: Container image repository
+   - Artifact Source: `<código-de-região>.ocir.io/${IMG_PATH}`
    
    *para o código de referencia de sua região **composto por 3 letras**, utilize a [tabela de referencia](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)*
        
-    ![](./Images/032-LAB4.png)
+![](./Images/032-LAB4.png)
 
 
- - Preencha o campo restante da tabela **Build config/result artifact name** com: docker-Images
+ - Preencha o campo restante da tabela **Build config/result artifact name** com: docker-img
        
     ![](./Images/033-LAB4.png)
 
-8. Clique em **Adicionar**
-9. Duplique a aba do seu navegador e acesse o OCIR.
-10. No novo compartment criado, clique em **Create Repository**.
+9. Clique em **Adicionar**
+10. Duplique a aba do seu navegador e acesse o OCIR.
+11. No novo compartment criado, clique em **Create Repository**.
 ![](./Images/060-LAB4.png)
 
-11. Em _Repository name_, insira o nome "java-Images" e clique em **Create Repository**.
+12. Em _Repository name_, insira o nome "java-img" e clique em **Create Repository**.
 ![](./Images/061-LAB4.png)
 ![](./Images/062-LAB4.png)
 
 
-12. Volte à aba referente ao OCI DevOps e, no canto superior direito, clique em **Start Manual Run**
+13. Volte à aba referente ao OCI DevOps e, no canto superior direito, clique em **Start Manual Run**
        
     ![](./Images/034-LAB4.png)
 
