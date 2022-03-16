@@ -7,4 +7,4 @@ Este é um evento preparatório para a certificação OCI Developer Associate! �
 - Lab. #4 - Automating Deployment
 - Lab. #5 - Operating Cloud Native Applications
 
-#VAIIIII!
+# #VAIIIII!
