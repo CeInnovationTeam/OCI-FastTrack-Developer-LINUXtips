@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CEP Linux Tips</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+
+<h1 type = "title">Consulte Seu CEP</h1>
+
+<form action="/action_page.php">
+  <label for="cep">CEP:</label><br>
+  <input type="text" id="cep" name="cep" required="true"><br>
+  <button type="button" id="clickbutton">Submit</button>
+</form> 
+
+<br>
+<div name="dados" id="dados" hidden="true">
+    <label type="new" for="bairro">Bairro:</label><br>
+    <input type="text" id="bairro" name="bairro" readonly="readonly"><br>
+    <label type="new" for="ddd">DDD:</label><br>
+    <input type="text" id="ddd" name="ddd"><br>
+    <label type="new" for="ibge">IBGE:</label><br>
+    <input type="text" id="ibge" name="ibge"><br>
+    <label type="new" for="localidade">Localidade:</label><br>
+    <input type="text" id="localidade" name="localidade"><br>
+    <label type="new" for="logradouro">logradouro:</label><br>
+    <input type="text" id="logradouro" name="logradouro"><br>
+    <label type="new" for="uf">UF:</label><br>
+    <input type="text" id="uf" name="uf"><br>
+</div>
+
+<script src="js/api.js"></script>
+<script type="text/javascript" src="https://www.geradordecep.com.br/assets/js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="https://www.geradordecep.com.br/assets/js/jquery.maskedinput-1.1.4.pack.js"/></script>
+<script>
+  $(document).ready(function(){
+	$("#cep").mask("99.999-999");});
+</script>
+<script>
+  window.apmrum = (window.apmrum || {}); 
+  window.apmrum.serviceName='CEP';
+  window.apmrum.webApplication='cepapp';
+  window.apmrum.ociDataUploadEndpoint='[Substitua com o Endpoint do APM]';
+  window.apmrum.OracleAPMPublicDataKey='[Substitua com a Public Key do APM]';
+</script>
+<script async crossorigin="anonymous" src="[Substitua com o Endpoint do APM]/static/jslib/apmrum.min.js"></script>
+</body>
+</html>
+

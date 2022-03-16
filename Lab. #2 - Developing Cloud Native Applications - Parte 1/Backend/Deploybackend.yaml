@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cepapp-backend
+  labels:
+    app: cepapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cepapp
+  template:
+    metadata:
+      labels:
+        app: cepapp
+    spec:
+      containers:
+      - name: backend
+        image: [Sua Região/Namespace]/linuxtips/back:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: APM_URL
+          value: "[Substitua pelo Endpoint do APM]"
+        - name: APM_KEY
+          value: "[Substitua pela Public Key do APM]"
+      imagePullSecrets:
+      - name: ocisecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cepapp-backend
+  labels:
+    app: cepapp
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "100"
+    service.beta.kubernetes.io/oci-load-balancer-internal: "true"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5000
+    targetPort: 5000
+    name: backend
+  selector:
+    app: cepapp

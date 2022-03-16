@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cepapp-front
+  labels:
+    app: cepapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cepapp
+  template:
+    metadata:
+      labels:
+        app: cepapp
+    spec:
+      containers:
+      - name: front
+        image: [Sua Região/Namespace]/linuxtips/front:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: ocisecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cepapp-front
+  labels:
+    app: cepapp
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "100"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    name: front
+  selector:
+    app: cepapp
