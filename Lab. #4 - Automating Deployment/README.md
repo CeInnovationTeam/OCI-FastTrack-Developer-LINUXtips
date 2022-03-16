@@ -222,13 +222,13 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 ![](./Images/029_0-LAB4.png)
 
  4. Na opção de seleção de artefatos, preencha como abaixo e clique em **Add**.
-   - **Name**: backend_jar
-   - **Type**: General artifact
-   - **Artifact registry**: *Selecione o Artifact registry gerado pelo terraform de nome "artifact_repository"*.
-   - **Artifact location**: Set a Custom artifact location and version
-   - **Artifact path**: backend.jar
-   - **Version**: ${BUILDRUN_HASH}
-   - **Replace parameters used in this artifact**: Yes, substitute placeholders
+- **Name**: backend_jar
+ - **Type**: General artifact
+ - **Artifact registry**: *Selecione o Artifact registry gerado pelo terraform de nome "artifact_repository"*.
+- **Artifact location**: Set a Custom artifact location and version
+- **Artifact path**: backend.jar
+- **Version**: ${BUILDRUN_HASH}
+- **Replace parameters used in this artifact**: Yes, substitute placeholders
        
 ![](./Images/030-LAB4.png)
 
@@ -245,67 +245,88 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 
  ![](./Images/028-LAB4.png)
 
- 8. Preencha o formulário da seguinte forma e clique em **Create Artifact**:
+ 8. Preencha o formulário como abaixo e clique em **Create Artifact**.
  - **Stage name**: Entrega de Image de Container
  - **Description**: (Defina uma descrição qualquer).
 
  ![](./Images/033_0-LAB4.png)
  
- 9. Preencha o formulário como abaixo.
-   - **Name**: backend_img
-   - **Type**: Container image repository
-   - Artifact Source: `<código-de-região>.ocir.io/${IMG_PATH}`
+ 9. Em *Add artifact*, preencha o formulário como abaixo e clique em **Add**.
+- **Name**: backend_img
+- **Type**: Container image repository
+- **Artifact Source**: `<código-de-região>.ocir.io/${IMG_PATH}`
+- **Replace parameters used in this artifact**: Yes, substitute placeholders
    
-   *para o código de referencia de sua região **composto por 3 letras**, utilize a [tabela de referencia](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)*
+*Para Ashburn e São Paulo, os códigos de região são respectivamente "iad" e "gru". Caso esteja em outra região, utilize a [tabela de refêrencia](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)*.
        
-![](./Images/032-LAB4.png)
+![](./Images/032_0-LAB4.png)
 
-
- - Preencha o campo restante da tabela **Build config/result artifact name** com: docker-img
+9. Preencha o campo restante da tabela **Build config/result artifact name** com: docker-img e clique em **Add**.
        
-    ![](./Images/033-LAB4.png)
+![](./Images/033_1-LAB4.png)
 
-9. Clique em **Adicionar**
-10. Duplique a aba do seu navegador e acesse o OCIR.
-11. No novo compartment criado, clique em **Create Repository**.
+10. Duplique a aba do seu navegador, clique no 🍔 menu hamburguer e acesse: **Developer Services** → **Container Registry**.
+
+![](./Images/060_0-LAB4.png)
+
+11. No compartment correto, clique em **Create Repository**.
 ![](./Images/060-LAB4.png)
 
 12. Em _Repository name_, insira o nome "java-img" e clique em **Create Repository**.
+
 ![](./Images/061-LAB4.png)
+
 ![](./Images/062-LAB4.png)
 
 
-13. Volte à aba referente ao OCI DevOps e, no canto superior direito, clique em **Start Manual Run**
+13. Volte à aba anterior, no OCI DevOps e, no canto superior direito, clique em **Start Manual Run**.
        
-    ![](./Images/034-LAB4.png)
+![](./Images/034_0-LAB4.png)
 
-Isso conclui o passo de Build do projeto, onde automatizamos a compilação do código java, criamos a imagem de container, e armazenamos ambas nos repositórios de artefato, e de container respectivamente
+Isso conclui a parte de Build (CI) do projeto! Até aqui automatizamos a compilação do código java, criamos a imagem de contêiner, e armazenamos ambas nos repositórios de artefatos, e de imagens de contêiner respectivamente. Vamos agora para a parte de Deploy (CD)!
 
 ## <a name="Passo4"></a> Passo 4: Criar e configurar entrega de aplicação a cluster Kubernetes (CD)
 
- 1. Acesse: Menu > Serviços de Desenvolvedor > Kubernetes Clusters
+ 1. Clique no 🍔 menu hambúrguer e acesse: **Developer Services** → **Kubernetes Clusters (OKE)**.
         
-    ![](./Images/035-LAB4.png)
+![](./Images/035-LAB4.png)
 
- 2. Selecione o cluster listado
+ 2. Selecione o cluster listado.
         
-    ![](./Images/036-LAB4.png)
+![](./Images/036-LAB4.png)
 
- 3. Clique em **Access Cluster**
+ 3. No canto superior, clique em **Access Cluster**.
         
-    ![](./Images/037-LAB4.png)
+![](./Images/037-LAB4.png)
 
- 4. Execute os passos 1 e 2 do guia
+ 4. Execute os passos 1 e 2 do guia.
         
-    ![](./Images/038-LAB4.png)
+![](./Images/038-LAB4.png)
 
- 5. Teste sua conexão com o cluster executando:
+ 5. Feito isto, no **Cloud Shell**, teste sua conexão com o cluster executando o comando abaixo.
 
-  ```shell
-  kubectl get nodes
- ```
+```shell
+kubectl get nodes
+```
 
- 6. Execute os comandos abaixo:
+- Você deverá visualizar algo como:
+
+```shell
+NAME           STATUS   ROLES   AGE   VERSION
+10.20.10.129   Ready    node    49d   v1.21.5
+10.20.10.37    Ready    node    49d   v1.21.5
+10.20.10.83    Ready    node    49d   v1.21.5
+```
+
+6. Colete o seu User OCID clicando no ícone de perfil e, em seguida, na 1ª opção.
+
+![](./Images/039_0-LAB4.png)
+
+- Após isto, no seu OCID, clique em **Copy**.
+
+![](./Images/039_1-LAB4.png)
+
+7. Para a criação do secret, execute os comandos abaixo e informe o seu User OCID, coletado anteriormente.
 
  ```shell
   cd ftRepo/scripts/
@@ -313,11 +334,10 @@ Isso conclui o passo de Build do projeto, onde automatizamos a compilação do c
   ./create-secret.sh  
  ```
 
- 7. Informe o seu User OCID (https://docs.oracle.com/pt-br/iaas/Content/API/Concepts/apisigningkey.htm#five)
- 8. No campo de password, informe o **Auth Token**
- 9. Aguarde o final do fluxo
+ 8. No campo de password, informe o **Auth Token**.
+ 9. Aguarde o final do fluxo.
         
-    ![](./Images/039-LAB4.png)
+![](./Images/039-LAB4.png)
 
  10. Retorne ao projeto: Menu > Serviços de Desenvolvedor > DevOps > Projetos,  e selecione o projeto deste workshop
  11. No canto esquerdo, selecione **Environments**
