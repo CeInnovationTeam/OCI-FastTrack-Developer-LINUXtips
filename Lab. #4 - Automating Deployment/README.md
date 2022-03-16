@@ -72,9 +72,9 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 
  - APM_AGENT_URL: Cole o link copiado no bloco de notas.
 
-Com isso, cumprimos todos os pré-requisitos para o laboratório!
-
  ![](./Images/012-LAB4.png)
+
+ Com isso, cumprimos todos os pré-requisitos para o laboratório!
 
  - - -
 
@@ -126,7 +126,7 @@ Com isso, cumprimos todos os pré-requisitos para o laboratório!
  
  ![](./Images/019-LAB4.png)
 
- 10. Execute os seguintes comandos para copiar o conteúdo do repositório BackendFTDev, para o repositório ftRepo
+ 10. Execute os seguintes comandos para copiar o conteúdo do repositório **BackendFTDev**, para o repositório **ftRepo**.
 
  ```shell
  git config --global user.email "<seu-email>"
@@ -134,67 +134,68 @@ Com isso, cumprimos todos os pré-requisitos para o laboratório!
  cp -r BackendFTDev/* ftRepo/
  cd ftRepo
  git add -A
- git commit -m "inicio do projeto"
+ git commit -m "Início do projeto"
  git push origin main
  ```
 
-*Ao final do último comando o **Usuário git** e a senha (**Auth Token**) poderão ser solicitados novamente*
+*Ao final do último comando o **Usuário git** e a senha (**Auth Token**) poderão ser solicitados novamente*.
 
  ## <a name="Passo2"></a> Passo 2: Criar e configurar processo de Build (CI)
 
- 1. Retorne a pagina inicial do projeto DevOps
- 2. Clique em **Criar pipeline de Build** 
+ 1. Retorne à página inicial do projeto DevOps.
+ 2. Clique em **Create build pipeline**. 
 
  ![](./Images/020-LAB4.png)
 
- 3. Preencha o formulário da seguinte forma, e clique em Criar:
-   - Nome: build
-   - Descrição: (Defina uma descrição qualquer)
+ 3. Preencha o formulário da seguinte forma, e clique em **Create**:
+   - **Name**: build
+   - **Description**: (Defina uma descrição qualquer).
 
  ![](./Images/021-LAB4.png)
 
- 4. Abra o pipeline de build recém criado.
- 5. Na aba parametros, defina os seguintes parametros:
-  - APM_ENDPOINT: Informação coletada nos pré requisitos
-  - APM_PVDATAKEY: Informação coletada nos pré requisitos
-  - APM_AGENT_URL: Informação coletada nos pré requisitos.
-  *Clique no sinal de "+" para que a informação fique salva*
+ 4. Abra o pipeline de build recém-criado.
+ 5. Na aba parâmetros, defina os seguintes parametros:
+  - APM_ENDPOINT: *Informação coletada nos pré requisitos*.
+  - APM_PVDATAKEY: *Informação coletada nos pré requisitos*.
+  - APM_AGENT_URL: *Informação coletada nos pré requisitos*.
+
+  **ATENÇÃO** - Ao inserir nome, valor e descrição, clique no sinal de "+" para que a informação fique salva.
   
  ![](./Images/022-LAB4.png)
 
- 6. Acesse a aba de **Build Pipeline**, e clique em **Add Stage**  
+ 6. Acesse a aba de **Build Pipeline**, e clique em **Add Stage**.
 
  ![](./Images/023-LAB4.png)
 
- 7. Selecione a opção **Managed Build** e clique **Próximo**
+ 7. Selecione a opção **Managed Build** e clique **Next**.
 
  ![](./Images/024-LAB4.png)
 
  8. Preencha o formulário da seguinte forma:
 
-  - Stage Name: Criacao de artefatos
-  - Descrição: (Defina uma descrição qualquer)
-  - OCI build agent compute shape: (Não alterar)
-  - Base container image: (Não alterar)
-  - Build spec file path: (Não alterar)
+- **Stage Name**: Criacao de artefatos
+- **Description**: (Defina uma descrição qualquer).
+- **OCI build agent compute shape**: *Não alterar*.
+- **Base container image**: *Não alterar*.
+- **Build spec file path**: *Não alterar*.
       
-    ![](./Images/025-LAB4.png)
+![](./Images/025-LAB4.png)
 
 
-  - Primary code repository: 
-    - Clique no botão **Selecionar** a direita
-    - Source Connection type: OCI Code Repository
-    - Selecione o repositório **ftRepo**
-    - Select Branch: (Não alterar)
-    - Build source name: **java_root**
-    - Clique em **Save**
+9. Em Primary code repository, clique em **Select**, selecione as opções abaixo e clique em **Save**. 
+
+- **Source Connection type**: OCI Code Repository
+- **Repositório**: ftRepo
+- **Select Branch**: *Não alterar*
+- **Build source name**: java_root
     
-    ![](./Images/026-LAB4.png)
+![](./Images/026-LAB4.png)
 
+- Feito isto, clique em **Add**.
 
-  - Clique em **Criar**
+![](./Images/025_1-LAB4.png)
 
- 9. Neste momento é importante entender a forma como a ferramenta trabalha: 
+Neste momento é importante entender a forma como a ferramenta trabalha: 
     
 - A ferramenta utiliza um documento no formato YAML para definir os passos que devem ser executados durante o processo de construção da aplicação.
 - Por padrão este documento é chamado de build_spec.yaml e deve ser configurado previamente de acordo com as necessidades da aplicação
