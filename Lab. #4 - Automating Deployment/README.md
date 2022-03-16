@@ -15,7 +15,7 @@ Nesta etapa construirá uma esteira de desenvolvimento capaz de entregar uma apl
  ## <a name="PreReqs"></a> Pre Reqs: Executar terraform de preparação de ambiente, e coletar informações relevantes ao processo
 
  1. Faça login em sua conta na Cloud. [link](https://www.oracle.com/cloud/sign-in.html) 
- 2. Execute o [Laboratório 2](../2%20-%20Using%20Terraform%20on%20OCI) deste workshop - *Execute apenas se você não o executou anteriormente*
+ 2. Execute o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) deste workshop - *Execute apenas se você não o executou anteriormente*
  3. No canto direito superior, clique no icone de perfil, e clique em seu usuário
 
  ![](./Images/001-LAB4.png)
