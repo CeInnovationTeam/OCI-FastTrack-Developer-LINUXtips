@@ -40,15 +40,32 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 ![](https://github.com/ladan19/images-lp/blob/main/photo-7.png?raw=true)
 7. Você vizualizará o dashboard de coleta de logs da VCN escolhida. Clique em **Explore with Log Search** à direita para:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-8.png?raw=true)
-8. Pronto! A pardir de agora você pode modificar as buscar para filtrar o log desejado. Dica: Mude a vialização para **Visualize** e divirta-se!
+8. Pronto! A pardir de agora você pode modificar as buscar para filtrar o log desejado.
+
+> Dica: Mude a vialização para **Visualize** e divirta-se!
 
 
 ---
 
 ## <a name="Passo2"></a> Passo 2: Ativar o serviço de Logging Analytics
 
-1. sdsds
-2. 
+1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Logging Analytics** :
+![](https://github.com/ladan19/images-lp/blob/main/photo-10.png?raw=true)
+2. Ative o clicando no botão **Start Using Logging Analytics**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-11.png?raw=true)
+3. Após a inicialização, clique no botão **Take me to Log Explorer**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-12.png?raw=true)
+
+> Dica: Repare que o serviço já cria algumas poíticas e um grupo de log *Default*
+
+5. Na console de Log Explorer no menu superior à esquerda clique e selecione **Administration**:
+![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image02.png?raw=true)
+6. Agora clique em **Log Groups** no menu **Resources** e em seguida no botão **Create Log Group**, para criarmos um novo grupo de log:
+![](https://github.com/ladan19/images-lp/blob/main/photo-13.png?raw=true)
+![](https://github.com/ladan19/images-lp/blob/main/photo-14.png?raw=true)
+7. sdfsdf
+8. sdfsdfsd
+
 
 ---
 
