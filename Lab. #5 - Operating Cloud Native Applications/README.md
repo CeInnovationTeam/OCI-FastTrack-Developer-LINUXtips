@@ -48,7 +48,7 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ---
 
-## <a name="Passo2"></a> Ativar o serviço de Logging Analytics e criar um grupo para os Logs
+## <a name="Passo2"></a> Passo 2: Ativar o serviço de Logging Analytics e criar um grupo para os Logs
 
 1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Logging Analytics** :
 ![](https://github.com/ladan19/images-lp/blob/main/photo-10.png?raw=true)
@@ -69,16 +69,16 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ---
 
-## <a name="Passo3"></a> Criar o Service Connector para replicar os logs do Logging para o Logging Analytics
+## <a name="Passo3"></a> Passo 3: Criar o Service Connector para replicar os logs do Logging para o Logging Analytics
 
 
-1. Agora replicaremos os logs apra o *Logging Analytics*. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Service Connectors**:
+1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Service Connectors**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-16.png?raw=true)
 3. Na console de *Service Connectors* clique no botão **Create Service Connector**:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image03.png?raw=true)
 1. Em **Connector Name** digite *LogVCNConnector*, em **Configure Source** selecione *Logging* e em **Target** selecione *Logging Analytcs*. Na parte de *Configure Source* selecione em **Log Group** o *LogGroupFlow* e em **Logs** selecione o *FlowLogs-VCN* criados anteriosmente:
 ![](https://github.com/ladan19/images-lp/blob/main/photo17.png?raw=true)
-1. Em **Configuration Target** selecione o **Log Group** *LogGroupVCN* e clique no botão **Create**:
+1. Em **Configuration Target** selecione o **Log Group** *LogGroupVCN* e (Muito Importante :warning:) clique no botão **Create** à direita _para criar as políticas para o conector tenha permissão de escrita_. Após isso clique no botão **Create** no canto inferior à esquerda para criar o conector:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-18.png?raw=true)
 1. asdas
 
