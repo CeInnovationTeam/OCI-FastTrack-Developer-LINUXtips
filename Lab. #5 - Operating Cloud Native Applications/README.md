@@ -8,20 +8,21 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 **A seguir você aprenderá o passo-a-passo desta configuração:**
 
  - [Pre Reqs: Criar Canal no Slack e logar na sua conta OCI](#PreReqs)
- - [Passo 1: Ativar o serviço de Logging e Logging Analytics](#Passo1)
+ - [Passo 1: Ativar o serviço de Logging](#Passo1)
+ - [Passo 2: Ativar o serviço de Logging Analytics](#Passo2)
 
- - - -
+- - -
 
- ## <a name="PreReqs"></a> Pre Reqs: Executar terraform de preparação de ambiente, e coletar informações relevantes ao processo
+## <a name="PreReqs"></a> Pre Reqs: Executar terraform de preparação de ambiente, e coletar informações relevantes ao processo
 
  1. Crie um [Workapace](https://slack.com/intl/pt-br/help/articles/201402297-Criar-um-canal) ou [Logue](https://slack.com/intl/pt-br/help/articles/212681477-Entrar-no-Slack) em um workspace existente;
  2. Crie um [Canal](https://slack.com/intl/pt-br/help/articles/201402297-Criar-um-canal) no Slack chamado *#linuxtips-lab5*;
  3. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI;
  4. Execute o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning), caso não o tenha executado anteriormente;
 
- - - -
+---
 
- ## <a name="Passo1"></a> Passo 1: Ativar o serviço de Logging e Logging Analytics
+## <a name="Passo1"></a> Passo 1: Ativar o serviço de Logging e Logging Analytics
 
 1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Logging**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-2.png?raw=true)
@@ -40,9 +41,13 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 8. Pronto! A pardir de agora você pode modificar as buscar para filtrar o log desejado. Dica: Mude a vialização para **Visualize** e divirta-se!
 
 
- - - -
+---
 
- ## <a name="Passo2"></a> Passo 2: NANANA
+## <a name="Passo2"></a> Passo 2: Ativar o serviço de Logging Analytics
 
+1. sdsds
+2. 
+
+---
 
 ### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **DevOps** na OCI! 🚀
