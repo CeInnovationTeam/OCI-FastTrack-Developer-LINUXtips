@@ -1,3 +1,5 @@
+# Lab. #5 - Operating Cloud Native Applications
+
 Olá, neste laboratório você aprenderá como registrar, monitorar e analisar os logs da infraestrutura Compute de OCI que você provisionou nos laboratórios anteriotes utilizando a **Oracle Cloud Observability and Management Platform**!
 
 - 🌀 [Página oficial do OCI Observability and Management Platform](https://www.oracle.com/br/manageability/)
@@ -28,13 +30,13 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 ![](https://github.com/ladan19/images-lp/blob/main/photo-2.png?raw=true)
 2. No menu à esquerda **Logging** clique em **Logs** e em seguida no botão à direita **Enable service log**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-3.png?raw=true)
-3. Escolha em **Service** o item *Virtual Cloud Network* e em **Resource** selecione a subnet pública criada anteriormete. Em **Log Category** selecione a opção de *Flow Logs* e em **Log Name** digite o nome *Flowlogs-VCN*. Depois em Log Location cria um novo group:
+3. Escolha em **Service** o item *Virtual Cloud Network* e em **Resource** selecione a subnet pública criada anteriormete. Em **Log Category** selecione a opção de *Flow Logs* e em **Log Name** digite o nome *Flowlogs-VCN*. Depois em Log Location clique em **Show Advanced Options** e clique em **Create New Group** para criar um novo grupo:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-4.png?raw=true)
-4. Na mesma tela em **Log Location**, clique em **Create New Group** para criar um grupo e em **Name** digite o nome do grupo *LogGroupFlow*:
+4. Na tela de criação de grupo de log em **Name** digite o nome do grupo *LogGroupFlow* e clique no botão **Create**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-5.png?raw=true)
-5. Agora clique no botão **Enable Log** para habilitar a configuração:
+5. Deixe selecionado o *LogGroupFlow* como **Log Group** e clique no botão **Enable Log** para habilitar a configuração:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-6.png?raw=true)
-6. Após a ativação (2-3 minutos), inicia-se a coleta de logs. Para visualizar no menu à esquerda **Logging** clique em **Logs** e depois clique no Log Name que acabamos de criar **Flowlogs-VCN**:
+6. Após a ativação (2-3 min), inicia-se a coleta de logs (5-6 min). Para visualizar no menu à esquerda **Logging** clique em **Logs** e depois clique no Log Name que acabamos de criar **Flowlogs-VCN**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-7.png?raw=true)
 7. Você vizualizará o dashboard de coleta de logs da VCN escolhida. Clique em **Explore with Log Search** à direita para:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-8.png?raw=true)
