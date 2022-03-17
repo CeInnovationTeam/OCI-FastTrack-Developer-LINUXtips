@@ -200,11 +200,15 @@ vi Deploybackend.yaml
 
 Pressione **i** para editar.
 
-Substitua os valores de **Codigo de Região**, **Namespace**, **Endpoint do APM** e **Key do APM** nas seguites linhas:
+Substitua os valores de **Image-Name**, **Endpoint do APM** e **Key do APM** nas seguites linhas:
+
+```note
+Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/back
+```
 
 ```yaml
       - name: backend
-        image: <region-key>/<tenancy-namespace>/linuxtips/back:latest
+        image: [Image-Name]:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -287,7 +291,7 @@ Com o CORS configurado, podemos clicar em **Next** e configurar a rota. Vamos pr
 - **PATH**: /getcep
 - **METHODS**: GET
 - **TYPE**: HTTP
-- **URL**: http://<External-IP-do-LoadBalancer>:5000
+- **URL**: ```http://[External-IP-do-LoadBalancer]:5000```
 
 ![apigw](images/api4.png)
 
@@ -394,13 +398,17 @@ E editar o arquivo Deployfrontend.yaml:
 vi Deployfrontend.yaml
 ```
 
- Pressione **i** para editar o arquivo, e substitua a **Region Key** e o **Namespace**:
+ Pressione **i** para editar o arquivo, e substitua a **Image-Name**:
+
+ ```note
+Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/front
+```
 
  ```yaml
      spec:
       containers:
       - name: front
-        image: <region-key>/<tenancy-namespace>/linuxtips/front:latest
+        image: [Image-Name]:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
