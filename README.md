@@ -7,6 +7,6 @@ Sequência de labs:
 - Lab. #2 - Developing Cloud Native Applications - Parte 1
 - Lab. #3 - Developing Cloud Native Applications - Parte 2
 - [Lab. #4 - Automating Deployment](/Lab.%20%234%20-%20Automating%20Deployment)
-- Lab. #5 - Operating Cloud Native Applications
+- Lab. #5 - Operating Cloud Native Applications (/Lab.%20%234%20-%20Operating%20Cloud%20Native%20Applications)
 
 # #VAIIIII!
