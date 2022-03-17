@@ -25,7 +25,7 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Logging**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-2.png?raw=true)
-2. No menu à esquerda clique em **Logging** e em seguida no botão à direita **Enable service log**:
+2. No menu à esquerda **Logging** clique em **Logs** e em seguida no botão à direita **Enable service log**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-3.png?raw=true)
 3. Escolha em **Service** o item *Virtual Cloud Network* e em **Resource** selecione a subnet pública criada anteriormete. Em **Log Category** selecione a opção de *Flow Logs* e em **Log Name** digite o nome *Flowlogs-VCN*. Depois em Log Location cria um novo group:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-4.png?raw=true)
@@ -33,10 +33,11 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 ![](https://github.com/ladan19/images-lp/blob/main/photo-5.png?raw=true)
 5. Agora clique no botão **Enable Log** para habilitar a configuração:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-6.png?raw=true)
-6. dsfsdf
-7. dfsdf
-8. sdfsdf
-
+6. Após a ativação (2-3 minutos), inicia-se a coleta de logs. Para visualizar no menu à esquerda **Logging** clique em **Logs** e depois clique no Log Name que acabamos de criar **Flowlogs-VCN**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-7.png?raw=true)
+7. Você vizualizará o dashboard de coleta de logs da VCN escolhida. Clique em **Explore with Log Search** à direita para:
+![](https://github.com/ladan19/images-lp/blob/main/photo-8.png?raw=true)
+8. Pronto! A pardir de agora você pode modificar as buscar para filtrar o log desejado. Dica: Mude a vialização para **Visualize** e divirta-se!
 
 
  - - -
@@ -44,4 +45,4 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
  ## <a name="Passo2"></a> Passo 2: NANANA
 
 
-### 👏🏻 Parabéns!!! Você foi capaz de construir com sucesso um pipeline completo de **DevOps** na OCI! 🚀
+### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **DevOps** na OCI! 🚀
