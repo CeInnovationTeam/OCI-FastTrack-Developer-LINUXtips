@@ -43,8 +43,7 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 
 2. No 🍔 menu de hambúrguer, acesse: **Developer Services** → **Resource Manager** → **Stacks**.
 
-![](./images/IMG04_1.PNG)
-
+![](./images/IMG04_01.PNG)
 
 3. Nesta nova janela, certifique que está no compartment "root" e clique em **Create Stack**.
 
