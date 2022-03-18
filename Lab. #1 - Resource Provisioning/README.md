@@ -46,19 +46,17 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 ![](./images/IMG04_1.PNG)
 
 
-- Nesta nova janela, clique em **Create Stack**.
+- Nesta nova janela, certifique que está no compartment "root" e clique em **Create Stack**.
 
-![](./images/printstack.PNG)
+![](./images/IMG05.PNG)
 
-- Selecione como source **a pasta do seu computador contendo os arquivos .tf baixados**, fazendo assim com que o Resource Manager já preencha todos os campos.
+- Selecione a opção "Zip file", clique em "browse" e arraste o arquivo (.zip), que contém os arquivos .tf. O Resource Manager irá preencher todos os campos.
 
-  
+![](./images/IMG06.PNG)
 
-![](./images/printcstack.PNG)
+- Clique em **NEXT**, para podermos configurar alguns parâmetros sobre os recursos a serem provisionados.
 
-- Clique em NEXT e podemos conferir as infos sobre os recursos que serão provisionados.
-
-- Lembre-se de selecionar o compartment criado, como abaixo.
+- Nesta nova tela, lembre-se de selecionar o compartment criado, como abaixo.
 
 ![](./images/IMG02.PNG)
 
@@ -69,12 +67,10 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 ![](./images/IMG03.PNG)
 
 
+- Criada nossa Stack, vamos agora clicar em **Apply**.
 
-- Criado nossa STACK vamos agora clicar em PLAN
 
-  
-
-![](./images/printplan.PNG)
+![](./images/IMG07.PNG)
 
   
 
