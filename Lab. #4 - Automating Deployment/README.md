@@ -267,21 +267,6 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
        
 ![](./Images/033_1-LAB4.png)
 
-👀 **ATENÇÃO** - *Caso você já tenha executado o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) nomeando o container registry como "java-img", pode pular para o [final deste passo](#FinalPasso3).*
-
-10. Duplique a aba do seu navegador, clique no 🍔 menu hamburguer e acesse: **Developer Services** → **Container Registry**.
-
-![](./Images/060_0-LAB4.png)
-
-11. No compartment correto, clique em **Create Repository**.
-![](./Images/060-LAB4.png)
-
-12. Em _Repository name_, insira o nome "java-img" e clique em **Create Repository**.
-
-![](./Images/061-LAB4.png)
-
-![](./Images/062-LAB4.png)
-
 <a name="FinalPasso3"></a> Isso conclui a parte de Build (CI) do projeto! Até aqui automatizamos a compilação do código java, criamos a imagem de contêiner, e armazenamos ambas nos repositórios de artefatos, e de imagens de contêiner respectivamente. Vamos agora para a parte de Deployment (CD)!
 
 ## <a name="Passo4"></a> Passo 4: Criar e configurar entrega de aplicação a cluster Kubernetes (CD)
