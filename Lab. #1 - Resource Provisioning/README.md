@@ -1,4 +1,4 @@
-# Lab. #.1 - Resource Provisioning  
+# Lab. 1 - Resource Provisioning  
 
 Nesta etapa, você irá provisionar recursos dentro da OCI utilizando infraestrutura como código (IaC) com o Resource Manager!
 
@@ -117,24 +117,7 @@ Nesta etapa, você irá provisionar recursos dentro da OCI utilizando infraestru
 ## Ambientes Provisionados com Sucesso !
 
  - Após finalizar o APPLY com sucesso, podemos conferir nossos
-   provisionamentos que foram efetuados.
+   provisionamentos que foram efetuados!
 
-**Recursos provisionados:**
+### 😎 Booooaaa !!! Você foi capaz de provisionar recursos usando Terraform na OCI! 🚀
 
-1. OKE
-
-2. OCI DevOps
-
-3. APM
-
-4. API Gateway
-
-**Juntamente com recursos de Rede e Gerenciamento como:**
-
-1. VCN
-
-2. Subnets
-
-3. Dynamic Groups
-
-4. Compartments
