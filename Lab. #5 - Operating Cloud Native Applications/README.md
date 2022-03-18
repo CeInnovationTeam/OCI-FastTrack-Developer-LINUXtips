@@ -95,14 +95,14 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ![](https://github.com/ladan19/images-lp/blob/main/photo-21.png?raw=true)
 
-3. Salvaremos o resultado da query para utilizarmos na criação do nosso dashboard a seguir. Clique em **Actions** no menu à direita e em **Save**, digite *Tráfego de Entrada* em **Search Name** e clique no botão **Save**:
-![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image04.png?raw=true)
+3. Salvaremos o resultado da query para utilizarmos na criação do nosso dashboard a seguir. Clique em **Actions** no menu à direita e em **Save**, digite *Ips de Entrada* em **Search Name** e clique no botão **Save**:
+![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image06.png?raw=true)
 4. Configure outra query customizada para saber o volume do tráfego de saída da VCN. substitua a query existente pela query abaixo, troque a visualização para gráfico de **Line** e clique no botão **Run**:
 
 ```sh
 'Log Source' = 'OCI VCN Flow Unified Schema Logs' | timestats avg('Content Size Out') as 'Outbound Traffic'
-
 ```
+
 ![](https://github.com/ladan19/images-lp/blob/main/photo-23.png?raw=true)
 
 5. Clique em **Actions** no menu à direita e em **Save as...**, digite *Tráfego de Saída* em **Search Name** e clique no botão **Save**:
@@ -110,10 +110,21 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 > Dica: Utilizar **Save as..** ao invés de **Save** para conseguir salvar o resultado com um novo nome.
 
-6. sdfsd
-7. dsfsdfds
-8. sdfsdf
+6. No menu ao lado esquerdo superior selecione **Dashboard**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-26.png?raw=true)
+7. Na console de **Dashboard** clique no botão **Create Dashboard**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-27.png?raw=true)
+8. Na console de criação do dashboard, selecione o compartement em **Widget Compartment** e arraste e solte o widget **Ips de Entrada**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-28.png?raw=true)
+10. Após arrastar o widget, será solicitado a criação do filtro. Adicionaremos um novo filtro, deixe a seleção **Log Group Compartment** e clique no botão **Save Changes**:
+11. Para a configuração da **Entity**, deixe a seleção *Entity* e clique no botão **Save Changes**:
+12. O widget será adicionado ao dashboard dessa maneira:
+![](https://github.com/ladan19/images-lp/blob/main/photo-30.png?raw=true)
+13. Realize o mesmo processo realizado anterioemnte clicando na aba **Add widget** para o widget **Tráfego de Saída**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-31.png?raw=true)
+14. Modifique no nome dashboard clicando no ícone **Pencil**, digite *VCN Dashboard* e tecle enter para salvar o nome. Após isso selecione a aba **About**, selecione um compartment e clique no botão **Save Changes**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-33.png?raw=true)
 
 ---
 
-### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **DevOps** na OCI! 🚀
+### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e **Monitoring** em OCI! 🚀
