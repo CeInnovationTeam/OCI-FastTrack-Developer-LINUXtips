@@ -40,7 +40,7 @@ Vamos coletar algumas informações na tenancy do OCI que serão utilizadas ao l
 
 ```bash
 Tenancy Namespace:
-User OCID:
+User Name:
 Auth Token:
 APM Endpoint:
 Public Key:
