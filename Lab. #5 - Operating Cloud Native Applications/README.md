@@ -5,11 +5,10 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 - 🌀 [Página oficial do OCI Observability and Management Platform](https://www.oracle.com/br/manageability/)
 - 🧾 [Documentação do OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)
 - 🧾 [Documentação do OCI Logging Analitics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)
-- 🧾 [Documentação do OCI Monitoring](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm)
 
 **A seguir você aprenderá o passo-a-passo desta configuração:**
 
-- [Pre Reqs: Criar Canal no Slack e logar na sua conta OCI](#PreReqs)
+- [Pre Reqs: Logar na sua conta OCI](#PreReqs)
 - [Passo 1: Ativar o serviço de Logging e habilitar a coleta dos Logs](#Passo1)
 - [Passo 2: Ativar o serviço de Logging Analytics e criar um grupo para os Logs](#Passo2)
 - [Passo 3: Criar o Service Connector para replicar os logs do Logging para o Logging Analytics](#Passo3)
@@ -19,10 +18,8 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ## <a name="PreReqs"></a> Pre Reqs: Criar Canal no Slack e logar na sua conta OCI
 
- 1. Crie um [Workapace](https://slack.com/intl/pt-br/help/articles/201402297-Criar-um-canal) ou [Logue](https://slack.com/intl/pt-br/help/articles/212681477-Entrar-no-Slack) em um workspace existente;
- 2. Crie um [Canal](https://slack.com/intl/pt-br/help/articles/201402297-Criar-um-canal) no Slack chamado *#linuxtips-lab5*;
- 3. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI;
- 4. Execute o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning), caso não o tenha executado anteriormente;
+ 1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI;
+ 2. Execute o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning), caso não o tenha executado anteriormente;
 
 ---
 
