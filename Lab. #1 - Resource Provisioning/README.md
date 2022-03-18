@@ -27,6 +27,27 @@ Juntamente com recursos de Rede e Gerenciamento como:
 
 - - -
 
+## Pre-Reqs - Criação de compartimento
+Como pré-requisito, é uma boa ideia criarmos um compartimento isolado para poder agrupar nossos recursos!
+
+1. Para isso, faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI.
+
+2. No 🍔 menu de hambúrguer, acesse: **Identity & Security** → **Identity** → **Compartments**.
+
+![](./images/IMG00_1.PNG)
+
+3. Na nova janela, clique em **Create Compartment**.
+
+![](./images/IMG00_2.PNG)
+
+4. Insira um nome para o compartimento e também uma descrição. Feito isto, clique em **Create Compartment**.
+
+![](./images/IMG00_3.PNG)
+
+Excelente!!! Podemos agora iniciar com os passos do nosso lab!
+
+- - -
+
 ## Passo 1 - Download do repositório
 
 Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório do github.
@@ -35,7 +56,8 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
   
 
 ![](./images/IMG01.PNG)
-  
+
+- - -
 
 ## Passo 2 - Upload do terraform no Resource Manager
 
