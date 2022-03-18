@@ -13,6 +13,7 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 - [Passo 1: Ativar o serviço de Logging e habilitar a coleta dos Logs](#Passo1)
 - [Passo 2: Ativar o serviço de Logging Analytics e criar um grupo para os Logs](#Passo2)
 - [Passo 3: Criar o Service Connector para replicar os logs do Logging para o Logging Analytics](#Passo3)
+- [Passo 4: Configurar queries customizadas e criar um dashboard](#Passo4)
 
 - - -
 
@@ -57,7 +58,7 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 3. Após a inicialização, clique no botão **Take me to Log Explorer**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-12.png?raw=true)
 
-> Dica: Repare que o serviço já cria algumas poíticas e um grupo de log *Default*
+> Dica: Repare que o serviço já cria algumas poíticas e um grupo de log *Default*.
 
 5. Na console de Log Explorer no menu superior à esquerda clique e selecione **Administration**:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image02.png?raw=true)
@@ -71,7 +72,6 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ## <a name="Passo3"></a> Passo 3: Criar o Service Connector para replicar os logs do Logging para o Logging Analytics
 
-
 1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Service Connectors**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-16.png?raw=true)
 3. Na console de *Service Connectors* clique no botão **Create Service Connector**:
@@ -80,8 +80,39 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 ![](https://github.com/ladan19/images-lp/blob/main/photo17.png?raw=true)
 1. Em **Configuration Target** selecione o **Log Group** *LogGroupVCN* e (Muito Importante :warning:) clique no botão **Create** à direita _para criar as políticas para o conector tenha permissão de escrita_. Após isso clique no botão **Create** no canto inferior à esquerda para criar o conector:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-18.png?raw=true)
-1. asdas
 
+---
+
+## <a name="Passo4"></a> Passo 4: Configurar queries customizadas e criar um dashboard
+
+1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Log Explorer**:
+![](https://github.com/ladan19/images-lp/blob/main/photo-19png.png?raw=true)
+2. Na console **Log Explorer** substitua a query existente pela query abaixo para buscar os IPs de origem que estão acessando a VCN que configuramos e clique no botão **Run**:
+
+```sh
+'Log Source' = 'OCI VCN Flow Unified Schema Logs' | stats count as logrecords by 'Source IP'
+```
+
+![](https://github.com/ladan19/images-lp/blob/main/photo-21.png?raw=true)
+
+3. Salvaremos o resultado da query para utilizarmos na criação do nosso dashboard a seguir. Clique em **Actions** no menu à direita e em **Save**, digite *Tráfego de Entrada* em **Search Name** e clique no botão **Save**:
+![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image04.png?raw=true)
+4. Configure outra query customizada para saber o volume do tráfego de saída da VCN. substitua a query existente pela query abaixo, troque a visualização para gráfico de **Line** e clique no botão **Run**:
+
+```sh
+'Log Source' = 'OCI VCN Flow Unified Schema Logs' | timestats avg('Content Size Out') as 'Outbound Traffic'
+
+```
+![](https://github.com/ladan19/images-lp/blob/main/photo-23.png?raw=true)
+
+6. Clique em **Actions** no menu à direita e em **Save as...**, digite *Tráfego de Saída* em **Search Name** e clique no botão **Save**:
+![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image05.png?raw=true)
+
+> Dica: Utilizar **Save as..** ao invés de **Save** para conseguir salvar o resultado com um novo nome.
+
+8. sdfsd
+9. dsfsdfds
+10. sdfsdf
 
 ---
 
