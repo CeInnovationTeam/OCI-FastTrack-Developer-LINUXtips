@@ -1,6 +1,6 @@
 # Lab. 1 - Resource Provisioning  
 
-Nesta etapa, você irá provisionar recursos dentro da OCI utilizando infraestrutura como código (IaC) com o Resource Manager!
+Nesta etapa, você irá provisionar recursos dentro da OCI utilizando Terraform com o serviço **Resource Manager**!
 
 - 🌀 [Página oficial do Resource Manager](https://www.oracle.com/br/devops/resource-manager/)
 - 🧾 [Documentação do Resource Manager](https://docs.oracle.com/pt-br/iaas/Content/ResourceManager/home.htm)
@@ -29,7 +29,7 @@ Juntamente com recursos de Rede e Gerenciamento como:
 
 ## Passo 1 - Download do repositório
 
-Como primeiro passo devemos fazer o download do arquivo no repositório do github.
+Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório do github.
 
  1. Para isso, acesse o [repositório](https://github.com/CeInnovationTeam/terraform-dev-linuxtips) e clique em **Download ZIP**.
   
@@ -37,36 +37,16 @@ Como primeiro passo devemos fazer o download do arquivo no repositório do githu
 ![](./images/IMG01.PNG)
   
 
-## Upload do terraform no Oracle Resource Manager
+## Passo 2 - Upload do terraform no Resource Manager
 
-  
+1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI.
 
-- Primeiro de tudo devemos estar **logados no OCI**
+2. No 🍔 menu de hambúrguer, acesse: **Developer Services** → **Resource Manager** → **Stacks**.
 
-- Vá até o menu sanduiche na esquerda
-
-  
-
-![](./images/printsand.PNG)
+![](./images/IMG04_1.PNG)
 
 
-- Clique em "**Developer Services**"
-
-  
-
-![](./images/printdevserv.PNG)
-
-
-- Nas opcões que aparecer selecione "**Resource Manager**".
-
-  
-
-![](./images/printorm.PNG)
-
-
-- Selecione e crie uma nova **STACK**
-
-  
+- Nesta nova janela, clique em **Create Stack**.
 
 ![](./images/printstack.PNG)
 
