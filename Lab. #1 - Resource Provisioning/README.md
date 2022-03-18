@@ -81,29 +81,15 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 
 ![](./images/IMG02.PNG)
 
-7. Duplique a aba do seu navegador, clique no menu do lado direto no ícone do usuário e no nome da sua tenancy.
+7. Clique em **Next**.
 
-![](./images/IMG08.PNG)
-
-8. Agora copie o **Object Storage Namespace**.
-
-![](./images/IMG09.PNG)
-
-9. De volta à aba do Resource Manager, altere o o **display name** padrão do container registry de "container_repository" para "java-img".
-
-10. Altere também **bucket_namespace** para o namespace copiado.
-
-![](./images/IMG03.PNG)
-
-11. Clique em **Next**.
-
-12. Criada nossa stack, clique em **Apply** e confirme a ação.
+8. Criada nossa stack, clique em **Apply** e confirme a ação.
 
 ![](./images/IMG07.PNG)
 
-13. O provisionamento dos recursos deverá durar em torno de 25 minutos.
+9. O provisionamento dos recursos deverá durar em torno de 25 minutos.
 
-14. Após finalizar o Apply com sucesso, podemos conferir o provisionamento dos nossos recursos!
+10. Após finalizar o Apply com sucesso, podemos conferir o provisionamento dos nossos recursos!
 
 ### ✔ Ambientes provisionados com sucesso!!! Você foi capaz de provisionar recursos usando Terraform na OCI! 🚀
 
