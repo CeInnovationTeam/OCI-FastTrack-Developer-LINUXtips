@@ -110,9 +110,9 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 > Dica: Utilizar **Save as..** ao invés de **Save** para conseguir salvar o resultado com um novo nome.
 
-8. sdfsd
-9. dsfsdfds
-10. sdfsdf
+7. sdfsd
+8. dsfsdfds
+9. sdfsdf
 
 ---
 
