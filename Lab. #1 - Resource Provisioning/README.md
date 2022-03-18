@@ -46,53 +46,44 @@ Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório d
 ![](./images/IMG04_1.PNG)
 
 
-- Nesta nova janela, certifique que está no compartment "root" e clique em **Create Stack**.
+3. Nesta nova janela, certifique que está no compartment "root" e clique em **Create Stack**.
 
 ![](./images/IMG05.PNG)
 
-- Selecione a opção "Zip file", clique em "browse" e arraste o arquivo (.zip), que contém os arquivos .tf. O Resource Manager irá preencher todos os campos.
+4. Selecione a opção "Zip file", clique em "browse" e arraste o arquivo (.zip), que contém os arquivos .tf. O Resource Manager irá preencher todos os campos.
 
 ![](./images/IMG06.PNG)
 
-- Clique em **NEXT**, para podermos configurar alguns parâmetros sobre os recursos a serem provisionados.
+5. Clique em **Next**, para podermos configurar alguns parâmetros sobre os recursos a serem provisionados.
 
-- Nesta nova tela, lembre-se de selecionar o compartment criado, como abaixo.
+6. Nesta nova tela, lembre-se de selecionar o compartment criado, como abaixo.
 
 ![](./images/IMG02.PNG)
 
-- Ao final da página, altere o display name padrão do container registry de "container_repository" para "java-img".
+7. Duplique a aba do seu navegador, clique no menu do lado direto no ícone do usuário e no nome da sua tenancy.
 
-- Lembre-se também de alterar o bucket_namespace para o namespace da sua tenancy, como abaixo.
+![](./images/IMG08.PNG)
+
+8. Agora copie o **Object Storage Namespace**.
+
+![](./images/IMG09.PNG)
+
+9. De volta à aba do Resource Manager, altere o **bucket_namespace** para o namespace copiado.
+
+10. Altere também o **display name** padrão do container registry de "container_repository" para "java-img".
 
 ![](./images/IMG03.PNG)
 
 
-- Criada nossa Stack, vamos agora clicar em **Apply**.
+11. Criada nossa stack, clique em **Apply** e confirme a ação.
 
 
 ![](./images/IMG07.PNG)
 
-  
 
-![](./images/printplan2.PNG)
+12. O provisionamento dos recursos deverá durar em torno de 25 minutos.
 
+13. Após finalizar o Apply com sucesso, podemos conferir o provisionamento dos nossos recursos!
 
-- Após concluído nosso PLAN, vamos agora voltar para nossa STACK e clicar em APPLY para de fato iniciar os provisionamentos e isso irá durar em torno de uns 20 minutos.
-
-  
-
-![](./images/printapply.PNG)
-
-  
-
-![](./images/printapply2.PNG)
-
-  
-
-## Ambientes Provisionados com Sucesso !
-
- - Após finalizar o APPLY com sucesso, podemos conferir nossos
-   provisionamentos que foram efetuados!
-
-### 😎 Booooaaa !!! Você foi capaz de provisionar recursos usando Terraform na OCI! 🚀
+### ✅ Ambientes provisionados com sucesso!!! Você foi capaz de provisionar recursos usando Terraform na OCI! 🚀
 
