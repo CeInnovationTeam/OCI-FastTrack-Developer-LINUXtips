@@ -92,6 +92,8 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ![](https://github.com/ladan19/images-lp/blob/main/photo-21.png?raw=true)
 
+> Dica: Caso não apareça a mensagem *No data has been ingested* no **Log Explorer**, clique no menu à esquerda que está escrito **Logging Analytics** → **Home** e clique na imagem **VCN Flow Logs**.
+
 3. Salvaremos o resultado da query para utilizarmos na criação do nosso dashboard a seguir. Clique em **Actions** no menu à direita e em **Save**, digite *Ips de Entrada* em **Search Name** e clique no botão **Save**:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image06.png?raw=true)
 4. Configure outra query customizada para saber o volume do tráfego de saída da VCN. substitua a query existente pela query abaixo, troque a visualização para gráfico de **Line** e clique no botão **Run**:
