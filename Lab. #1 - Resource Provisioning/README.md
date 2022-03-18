@@ -127,11 +127,11 @@ Provisionar recursos dentro do OCI utilizando infraestrutura como código.
 
 1. OKE
 
-2. DEVOPS
+2. OCI DevOps
 
 3. APM
 
-4. API GATEWAY
+4. API Gateway
 
 **Juntamente com recursos de REDE e GERENCIAMENTO como:**
 
