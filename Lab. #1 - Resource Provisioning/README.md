@@ -36,60 +36,6 @@ Provisionar recursos dentro do OCI utilizando infraestrutura como código.
   
 
 ![](./images/IMG01.PNG)
-
-  
-
- - Ok, agora já possuímos uma pasta com os códigos terraform prontos
-   para utilizarmos vamos então **codificar um arquivo .tf** para
-   provisionarmos um **Oracle API Gateway** juntamente com os outros
-   recursos já criados nessa pasta.
-
-  
-
-## 2. Criar um novo arquivo .tf
-
-  
-
- - Para criarmos um novo arquivo terraform simplesmente adicionamos um
-   novo arquivo de texto com o nome **"apigateway.tf"** ou então
-   qualquer outro nome mas com a extensão **".tf"** DENTRO DA PASTA que estão os outros arquivos terraform.
-
-  
-
-Exemplo:
-
-  
-
-![](./images/printnewarch.PNG)
-
-  
-
- - Agora adicionamos esse código abaixo para dizer que queremos
-   provisionar um Oracle API Gateway:
-
-```
-
-resource "oci_apigateway_gateway" "devops_gateway" {
-
-	compartment_id = var.compartment_id
-	endpoint_type = var.api_gateway_type
-	subnet_id = oci_core_subnet.oke_lb_subnet[0].id
-	display_name = var.api_gateway_name
-
-}
-
-```
-
-Neste código estamos dizendo que queremos criar um novo recurso do tipo **"oci_apigateway_gateway"** e estamos setando as infos necessárias para configurar este recurso.
-
-  
-
-Fonte deste código: [Documentação Terraform sobre API GATEWAY](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/apigateway_gateway)
-
-  
-
- - **Criado e preenchido este arquivo .tf, podemos agora fazer o upload de toda essa infra como código no OCI**
-
   
 
 ## Upload do terraform no Oracle Resource Manager
@@ -174,16 +120,10 @@ Fonte deste código: [Documentação Terraform sobre API GATEWAY](https://regist
 
 ## Ambientes Provisionados com Sucesso !
 
-  
-
  - Após finalizar o APPLY com sucesso, podemos conferir nossos
    provisionamentos que foram efetuados.
 
-  
-
 **Recursos provisionados:**
-
-  
 
 1. OKE
 
