@@ -1,18 +1,18 @@
 # Lab. #.1 - Resource Provisioning  
 
-**Objetivo desse lab:**
+Nesta etapa, você irá provisionar recursos dentro da OCI utilizando infraestrutura como código (IaC) com o Resource Manager!
 
-Provisionar recursos dentro do OCI utilizando infraestrutura como código.
+- 🌀 [Página oficial do Resource Manager](https://www.oracle.com/br/devops/resource-manager/)
+- 🧾 [Documentação do Resource Manager](https://docs.oracle.com/pt-br/iaas/Content/ResourceManager/home.htm)
 
 **Os recursos provisionados serão:**
 
-1. OKE
-
-2. DEVOPS
-
-3. APM
-
-4. API GATEWAY
+- OKE
+- OCI DevOps
+- APM
+- API Gateway
+- Streaming
+- Object Storage
 
 **Juntamente com recursos de REDE e GERENCIAMENTO como:**
 
