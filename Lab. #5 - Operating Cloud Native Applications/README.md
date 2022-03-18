@@ -126,4 +126,4 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ---
 
-### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e ** Logging Analytics** em OCI! 🚀
+### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e **Logging Analytics** em OCI! 🚀
