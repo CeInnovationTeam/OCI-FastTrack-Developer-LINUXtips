@@ -79,20 +79,16 @@ Provisionar recursos dentro do OCI utilizando infraestrutura como código.
 
 - Clique em NEXT e podemos conferir as infos sobre os recursos que serão provisionados.
 
-- Selecione um compartment como primeira opção e o restante não será necessário alterar.
+- Lembre-se de selecionar o compartment criado, como abaixo.
 
-- Clique em NEXT.
+![](./images/IMG02.PNG)
 
-  
+- Ao final da página, altere o display name padrão do container registry de "container_repository" para "java-img".
 
-![](./images/printstackcomp.PNG)
+- Lembre-se também de alterar o bucket_namespace para o namespace da sua tenancy, como abaixo.
 
+![](./images/IMG03.PNG)
 
-- Nessa nova tela irá pedir para conferir as informações e clique em CREATE
-
-  
-
-![](./images/printstackcreate.PNG)
 
 
 - Criado nossa STACK vamos agora clicar em PLAN
