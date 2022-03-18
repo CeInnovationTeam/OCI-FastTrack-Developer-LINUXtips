@@ -1,4 +1,4 @@
-# Lab. #1 - Resource Provisioning  
+# Lab. \#1 - Resource Provisioning  
 
 **Objetivo desse lab:**
 
