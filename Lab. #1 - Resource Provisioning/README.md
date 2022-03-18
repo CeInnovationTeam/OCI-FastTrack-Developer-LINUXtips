@@ -36,10 +36,6 @@ Provisionar recursos dentro do OCI utilizando infraestrutura como código.
   
 
 ![](./images/IMG01.PNG)
-
-  
-## 2. Upload do terraform no Oracle Resource Manager
-
   
 
 - Primeiro de tudo devemos estar **logados no OCI**
@@ -120,16 +116,10 @@ Provisionar recursos dentro do OCI utilizando infraestrutura como código.
 
 ## Ambientes Provisionados com Sucesso !
 
-  
-
  - Após finalizar o APPLY com sucesso, podemos conferir nossos
    provisionamentos que foram efetuados.
 
-  
-
 **Recursos provisionados:**
-
-  
 
 1. OKE
 

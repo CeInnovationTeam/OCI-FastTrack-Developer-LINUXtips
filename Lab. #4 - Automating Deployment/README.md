@@ -18,6 +18,8 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 
  ## <a name="PreReqs"></a> Pre Reqs: Executar terraform de preparação de ambiente, e coletar informações relevantes ao processo
 
+👀 **ATENÇÃO** - *Caso você já tenha executado o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) e o [Lab. #2](Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201), basta coletar o APM_PVDATAKEY na [etapa 10](#Etapa10).*
+
  1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI. 
  2. Execute o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning), caso não o tenha executado anteriormente.
  3. No canto direito superior, clique no ícone de perfil, e clique em seu usuário.
@@ -51,7 +53,7 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
    
  ![](./Images/007-LAB4.png)
 
- 10. Copie as informações necessárias para o bloco de notas.
+ 10. <a name="Etapa10"></a> Copie as informações necessárias para o bloco de notas.
 
 - APM_ENDPOINT: Item 1 da imagem
 - APM_PVDATAKEY: Item 2 da imagem
@@ -215,7 +217,7 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 ![](./Images/028-LAB4.png)
 
 
- 3. Preencha o formulário como abaixo e clique em **Select artifact(s)**.
+ 3. Preencha o formulário como abaixo e clique em **Create artifact**.
  - **Stage name**: Entrega de artefato
  - **Description**: (Defina uma descrição qualquer).
 
@@ -265,6 +267,8 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
        
 ![](./Images/033_1-LAB4.png)
 
+👀 **ATENÇÃO** - *Caso você já tenha executado o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) nomeando o container registry como "java-img", pode pular para o [final deste passo](#FinalPasso3).*
+
 10. Duplique a aba do seu navegador, clique no 🍔 menu hamburguer e acesse: **Developer Services** → **Container Registry**.
 
 ![](./Images/060_0-LAB4.png)
@@ -278,12 +282,7 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 
 ![](./Images/062-LAB4.png)
 
-
-13. Volte à aba anterior, no OCI DevOps e, no canto superior direito, clique em **Start Manual Run**.
-       
-![](./Images/034_0-LAB4.png)
-
-Isso conclui a parte de Build (CI) do projeto! Até aqui automatizamos a compilação do código java, criamos a imagem de contêiner, e armazenamos ambas nos repositórios de artefatos, e de imagens de contêiner respectivamente. Vamos agora para a parte de Deployment (CD)!
+<a name="FinalPasso3"></a> Isso conclui a parte de Build (CI) do projeto! Até aqui automatizamos a compilação do código java, criamos a imagem de contêiner, e armazenamos ambas nos repositórios de artefatos, e de imagens de contêiner respectivamente. Vamos agora para a parte de Deployment (CD)!
 
 ## <a name="Passo4"></a> Passo 4: Criar e configurar entrega de aplicação a cluster Kubernetes (CD)
 
@@ -362,7 +361,7 @@ NAME           STATUS   ROLES   AGE   VERSION
  - **Name**: deployment.yaml
  - **Type**: Kubernetes manifest
  - **Artifact Source**: Inline
- - **Value**: Cole o conteudo do arquivo https://github.com/CeInnovationTeam/BackendFTDev/blob/main/scripts/deployment.yaml
+ - **Value**: Cole o conteúdo do arquivo https://github.com/CeInnovationTeam/BackendFTDev/blob/main/scripts/deployment.yaml
  *Não altere a identação (espaços) do documento, pois isso pode quebrá-lo*.
  - **Replace parameters used in this artifact**: Yes, substitute placeholders
           
