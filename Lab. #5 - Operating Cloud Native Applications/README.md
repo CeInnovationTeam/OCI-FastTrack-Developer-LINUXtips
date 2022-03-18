@@ -117,7 +117,9 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 8. Na console de criação do dashboard, selecione o compartement em **Widget Compartment** e arraste e solte o widget **Ips de Entrada**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-28.png?raw=true)
 10. Após arrastar o widget, será solicitado a criação do filtro. Adicionaremos um novo filtro, deixe a seleção **Log Group Compartment** e clique no botão **Save Changes**:
+![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image07.png?raw=true)
 11. Para a configuração da **Entity**, deixe a seleção *Entity* e clique no botão **Save Changes**:
+![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image08.png?raw=true)
 12. O widget será adicionado ao dashboard dessa maneira:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-30.png?raw=true)
 13. Realize o mesmo processo realizado anterioemnte clicando na aba **Add widget** para o widget **Tráfego de Saída**:
