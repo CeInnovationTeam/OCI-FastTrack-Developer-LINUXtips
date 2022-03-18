@@ -6,7 +6,7 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 - 🧾 [Documentação do OCI DevOps](https://docs.oracle.com/pt-br/iaas/Content/devops/using/home.htm)
 
 **Você aprenderá todo o passo-a-passo dessa implementação:**
- - [Pre Reqs: Executar terraform de preparação de ambiente, e coletar informações relevantes ao processo](#PreReqs)
+ - [Pre Reqs: Coleta de informações relevantes ao processo](#PreReqs)
  - [Passo 1: Clonar o repositório e movimentar conteúdo para repositório do projeto DevOps](#Passo1)
  - [Passo 2: Criar e configurar processo de Build (CI)](#Passo2)
  - [Passo 3: Criar e configurar entrega de artefatos (CI)](#Passo3)
@@ -16,67 +16,27 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 
  - - -
 
- ## <a name="PreReqs"></a> Pre Reqs: Executar terraform de preparação de ambiente, e coletar informações relevantes ao processo
-
-👀 **ATENÇÃO** - *Caso você já tenha executado o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) e o [Lab. #2](Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201), basta coletar o APM_PVDATAKEY na [etapa 10](#Etapa10).*
+ ## <a name="PreReqs"></a> Pre Reqs: Coleta de informações relevantes ao processo
 
  1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI. 
- 2. Execute o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning), caso não o tenha executado anteriormente.
- 3. No canto direito superior, clique no ícone de perfil, e clique em seu usuário.
 
- ![](./Images/001-LAB4.png)
+ 2. Realize os labs [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) e [Lab #2](Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201).
 
- 4.  No canto esquerdo inferior, clique em **Auth Tokens**, e em seguida clique em **Generate Token**
-
- ![](./Images/002-LAB4.png)
-
- 5. Dê uma descrição ao token, e clique em **Generate Token**.
-
- ![](./Images/003-LAB4.png)
-
- 6. **ATENÇÃO** - Copie o token gerado para um **bloco de notas**. Caso ele se perca, será necessário gerá-lo novamente.
-
- ![](./Images/004-LAB4.png)
-
- - Durante todo este laboratório, utilizaremos este código quando for solicitada a informação de **Auth Token**.
-
- 7. No menu, no canto esquerdo superior acesse: **Observability & Management** → **Application Performance** → **Administration**.
+ 3. No 🍔 menu hambúrguer, acesse: **Observability & Management** → **Application Performance** → **Administration**.
 
  ![](./Images/005-LAB4.png)
 
+ 4.  No canto esquerdo inferior, em **Scope**, valide se o **Comparment** criado no [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) está selecionado.
 
- 8.  No canto esquerdo inferior, em **Scope**, valide se o **Comparment** correto está selecionado.
-  
- ![](./Images/006-LAB4.png)
-
- 9. Selecione o domínio APM listado:.
+ 5. Selecione o domínio APM listado.
    
  ![](./Images/007-LAB4.png)
 
- 10. <a name="Etapa10"></a> Copie as informações necessárias para o bloco de notas.
+ 6. Copie a chave privada do domínio para um bloco de notas.
 
-- APM_ENDPOINT: Item 1 da imagem
-- APM_PVDATAKEY: Item 2 da imagem
-
-![](./Images/008-LAB4.png)
-
- 11. Retorne para a página de dominios, clicando em **APM Domains**.
-
- ![](./Images/009-LAB4.png)
+ ![](./Images/008_1-LAB4.PNG)
  
- 12. No canto esquerdo inferior, em Resources, clique em **Download APM Agent**.
-
- ![](./Images/010-LAB4.png)
- 
- 13. Com o botão direito do mouse, clique no item listado, e selecione **Copiar Link**.
-
- ![](./Images/011-LAB4.png)
-
- - APM_AGENT_URL: Cole o link copiado no bloco de notas.
-
- ![](./Images/012-LAB4.png)
-
- Com isso, cumprimos todos os pré-requisitos para o laboratório!
+ É isso! Cumprimos todos os pré-requisitos para o laboratório!
 
  - - -
 
