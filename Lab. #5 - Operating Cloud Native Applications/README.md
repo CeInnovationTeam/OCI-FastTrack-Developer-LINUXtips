@@ -105,14 +105,14 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 ```
 ![](https://github.com/ladan19/images-lp/blob/main/photo-23.png?raw=true)
 
-6. Clique em **Actions** no menu à direita e em **Save as...**, digite *Tráfego de Saída* em **Search Name** e clique no botão **Save**:
+5. Clique em **Actions** no menu à direita e em **Save as...**, digite *Tráfego de Saída* em **Search Name** e clique no botão **Save**:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image05.png?raw=true)
 
 > Dica: Utilizar **Save as..** ao invés de **Save** para conseguir salvar o resultado com um novo nome.
 
-7. sdfsd
-8. dsfsdfds
-9. sdfsdf
+6. sdfsd
+7. dsfsdfds
+8. sdfsdf
 
 ---
 
