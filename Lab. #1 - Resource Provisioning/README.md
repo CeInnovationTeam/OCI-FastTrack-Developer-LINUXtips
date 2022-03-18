@@ -133,12 +133,12 @@ Provisionar recursos dentro do OCI utilizando infraestrutura como código.
 
 4. API Gateway
 
-**Juntamente com recursos de REDE e GERENCIAMENTO como:**
+**Juntamente com recursos de Rede e Gerenciamento como:**
 
 1. VCN
 
-2. SUBNETS
+2. Subnets
 
-3. DYNAMIC GROUPS
+3. Dynamic Groups
 
-4. COMPARTMENTS
+4. Compartments
