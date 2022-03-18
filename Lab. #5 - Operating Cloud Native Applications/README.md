@@ -4,7 +4,7 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 - 🌀 [Página oficial do OCI Observability and Management Platform](https://www.oracle.com/br/manageability/)
 - 🧾 [Documentação do OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)
-- 🧾 [Documentação do OCI Logging Analitics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)
+- 🧾 [Documentação do OCI Logging Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)
 
 **A seguir você aprenderá o passo-a-passo desta configuração:**
 
@@ -126,4 +126,4 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ---
 
-### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e **Monitoring** em OCI! 🚀
+### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e ** Logging Analytics** em OCI! 🚀
