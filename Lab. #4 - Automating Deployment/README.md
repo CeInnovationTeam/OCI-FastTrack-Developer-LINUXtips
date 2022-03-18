@@ -231,78 +231,39 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
 
 ## <a name="Passo4"></a> Passo 4: Criar e configurar entrega de aplicação a cluster Kubernetes (CD)
 
- 1. Clique no 🍔 menu hambúrguer e acesse: **Developer Services** → **Kubernetes Clusters (OKE)**.
-        
-![](./Images/035-LAB4.png)
-
- 2. Selecione o cluster listado.
-        
-![](./Images/036-LAB4.png)
-
- 3. No canto superior, clique em **Access Cluster**.
-        
-![](./Images/037-LAB4.png)
-
- 4. Execute os passos 1 e 2 do guia.
-        
-![](./Images/038-LAB4.png)
-
- 5. Feito isto, no **Cloud Shell**, teste sua conexão com o cluster executando o comando abaixo.
-
-```shell
-kubectl get nodes
-```
-
-- Você deverá visualizar algo como:
-
-```shell
-NAME           STATUS   ROLES   AGE   VERSION
-10.20.10.129   Ready    node    49d   v1.21.5
-10.20.10.37    Ready    node    49d   v1.21.5
-10.20.10.83    Ready    node    49d   v1.21.5
-```
-
-6. Colete o seu User OCID clicando no ícone de perfil e, em seguida, na 1ª opção.
-
-![](./Images/039_0-LAB4.png)
-
-- Após isto, no seu OCID, clique em **Copy**.
-
-![](./Images/039_1-LAB4.png)
-
-7. Para a criação do secret, execute os comandos abaixo e informe o seu User OCID, coletado anteriormente.
+1. No **Cloud Shell**, para a criação do secret, execute os comandos abaixo e informe o seu User OCID e Auth Token, coletados anteriormente.
 
  ```shell
   cd ftRepo/scripts/
   chmod +x create-secret.sh 
   ./create-secret.sh  
  ```
- 8. No campo de password, informe o **Auth Token**.
- 9. Aguarde o final do fluxo.
+
+2. Aguarde o final do fluxo.
         
 ![](./Images/039-LAB4.png)
 
- 10. Retorne ao seu projeto DevOps clicando no 🍔 menu hamburguer e acessando: **Developer Services**  → **Projects**.
- 11. No canto esquerdo, selecione **Environments**.
+ 3. Retorne ao seu projeto DevOps clicando no 🍔 menu hamburguer e acessando: **Developer Services**  → **Projects**.
+ 4. No canto esquerdo, selecione **Environments**.
          
 ![](./Images/040-LAB4.png)
 
- 12. Clique em **Create New Environment**.
+ 5. Clique em **Create New Environment**.
 
- 13. Preencha o formulário como abaixo e clique em **Next**.
+ 6. Preencha o formulário como abaixo e clique em **Next**.
   - **Environment type**: Oracle Kubernetes Engine
   - **Name**: OKE
   - **Description**: OKE
 
- 14. Selecione o Cluster de Kubernetes, e clique em **Create Envrinoment**.
+ 7. Selecione o Cluster de Kubernetes, e clique em **Create Envrinoment**.
 
  ![](./Images/041-LAB4.png)
 
- 16. No canto esquerdo selecione **Artifacts** em seguida em **Add Artifact**.
+ 8. No canto esquerdo selecione **Artifacts** em seguida em **Add Artifact**.
           
 ![](./Images/042-LAB4.png)
 
- 17. Preencha o formulario como abaixo e clique em **Add**.
+ 9. Preencha o formulario como abaixo e clique em **Add**.
  - **Name**: deployment.yaml
  - **Type**: Kubernetes manifest
  - **Artifact Source**: Inline
@@ -312,42 +273,42 @@ NAME           STATUS   ROLES   AGE   VERSION
           
 ![](./Images/043_0-LAB4.png)
 
- 18. No canto esquerdo, selecione **Deployment Pipelines** e, em seguida, clique em **Create Pipeline**.
+ 10. No canto esquerdo, selecione **Deployment Pipelines** e, em seguida, clique em **Create Pipeline**.
           
 ![](./Images/044-LAB4.png)
 
- 19. Preencha o formulário como abaixo e clique em **Create pipeline**.
+ 11. Preencha o formulário como abaixo e clique em **Create pipeline**.
  - **Pipeline name**: deploy
  - **Description**: (Defina uma descrição qualquer).
           
 ![](./Images/048-LAB4.png)
 
- 20. Na Aba de **Parameters** configure o seguinte parâmetro:
+ 12. Na Aba de **Parameters** configure o seguinte parâmetro:
  
  - REGISTRY_REGION: `<código-de-região>`.ocir.io  
           
 ![](./Images/049-LAB4.png)
 
- 21. Retorne à aba de **Pipeline** e clique em **Add Stage**.
+ 13. Retorne à aba de **Pipeline** e clique em **Add Stage**.
           
 ![](./Images/050-LAB4.png)
 
- 22. Selecione a Opção **Apply Manifest to your Kubernetes Cluster** e clique em **Next**.
+ 14. Selecione a Opção **Apply Manifest to your Kubernetes Cluster** e clique em **Next**.
           
 ![](./Images/051-LAB4.png)
 
- 23. Preencha o formulário da seguinte forma:
+ 15. Preencha o formulário da seguinte forma:
  - **Name**: Deployment da Aplicacao
  - **Description**: (Defina uma Descrição qualquer).
  - **Environment**: OKE
 
 ![](./Images/052_0-LAB4.png)
 
-24. Clique em **Select Artifact**, e selecione **deployment.yaml**.
+16. Clique em **Select Artifact**, e selecione **deployment.yaml**.
 
 ![](./Images/052_1-LAB4.png)
 
-25. Feito isto, clique em **Add**.
+17. Feito isto, clique em **Add**.
  
  Com isso finalizamos a parte de Deployment (CD) do nosso projeto! No passo a seguir vamos conectar ambos os pipelines, e definir um gatilho (trigger) para que o processo automatizado se inicie!
 
