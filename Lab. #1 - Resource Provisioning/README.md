@@ -5,34 +5,33 @@ Nesta etapa, você irá provisionar recursos dentro da OCI utilizando infraestru
 - 🌀 [Página oficial do Resource Manager](https://www.oracle.com/br/devops/resource-manager/)
 - 🧾 [Documentação do Resource Manager](https://docs.oracle.com/pt-br/iaas/Content/ResourceManager/home.htm)
 
-**Os recursos provisionados serão:**
+Os recursos provisionados serão:
 
 - OKE
+- Artifact Registry
+- Container Registry
 - OCI DevOps
 - APM
 - API Gateway
 - Streaming
 - Object Storage
+- Functions
 
-**Juntamente com recursos de REDE e GERENCIAMENTO como:**
+Juntamente com recursos de Rede e Gerenciamento como:
 
-1. VCN
+- VCN
+- Subnets
+- Dynamic Groups
+- Policies
+- Compartments
 
-2. SUBNETS
+- - -
 
-3. DYNAMIC GROUPS
+## Passo 1 - Download do repositório
 
-4. COMPARTMENTS
+Como primeiro passo devemos fazer o download do arquivo no repositório do github.
 
-  
-
-## 1. Download repositório
-
-  
-
- - Como primeiro passo devemos fazer o download do arquivo no repositório do github.
-
- - Para isso, acesse o [repositório](https://github.com/CeInnovationTeam/terraform-dev-linuxtips) e clique em **Download ZIP**.
+ 1. Para isso, acesse o [repositório](https://github.com/CeInnovationTeam/terraform-dev-linuxtips) e clique em **Download ZIP**.
   
 
 ![](./images/IMG01.PNG)
