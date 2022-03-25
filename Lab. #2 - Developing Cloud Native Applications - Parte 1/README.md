@@ -157,7 +157,7 @@ Vamos realizar o build da imagem do backend e depois fazer o push para o OCIR.
 Execute o comando:
 
 ```bash
-docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/back .
+docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back .
 ```
 
 ### Docker Push
@@ -165,7 +165,7 @@ docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/back .
 Depois da Build vamos fazer o push para o OCIR
 
 ```bash
-docker push <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/back
+docker push <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back
 ```
 
 ### Criando Secret no Kubernetes
@@ -203,7 +203,7 @@ Pressione **i** para editar.
 Substitua os valores de **Image-Name**, **Endpoint do APM** e **Key do APM** nas seguites linhas:
 
 ```note
-Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/back
+Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/back
 ```
 
 ```yaml
@@ -373,7 +373,7 @@ Salve o arquivo.
 Após, configurar o frontend, vamos realizar a build do docker com o seguinte comando.
 
 ```bash
-docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/front .
+docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front .
 ```
 
 ### Docker Push Front
@@ -381,7 +381,7 @@ docker build -t <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/front .
 Ao final da build podemos fazer o push para o OCIR
 
 ```bash
-docker push <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/front
+docker push <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front
 ```
 
 ### Configurar o Manifesto do Kubernetes
@@ -401,7 +401,7 @@ vi Deployfrontend.yaml
  Pressione **i** para editar o arquivo, e substitua a **Image-Name**:
 
  ```note
-Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/linuxtips/front
+Image-Name = <Codigo Region>.ocir.io/<tenancy-namespace>/ftdeveloper/front
 ```
 
  ```yaml
